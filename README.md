@@ -26,6 +26,17 @@ localhost:8080/v1/orders
 }
 ```
 
+Ou se preferir atraves de um comando curl
+```
+curl --location --request POST 'localhost:8080/v1/orders' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "orderId": "45854",
+    "paymentType": "teste",
+    "value": 800
+}'
+```
+
 5. Verifique no terminal o consumo desta requisição
 ```
 Order: Order(orderId=45854, paymentType=Cartão, value=800)
